@@ -1,0 +1,139 @@
+:root {
+    --primary: #2e7d32;
+    --primary-light: #4caf50;
+    --primary-dark: #1b5e20;
+    --secondary: #795548;
+    --text: #2c3e50;
+    --background: #f0f4f8;
+    --sidebar-bg: rgba(255, 255, 255, 0.9);
+    --card-bg: #ffffff;
+    --accent: #e8f5e9;
+    --border: #e0e0e0;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark-theme {
+    --primary: #4caf50;
+    --primary-light: #81c784;
+    --primary-dark: #388e3c;
+    --secondary: #a1887f;
+    --text: #ecf0f1;
+    --background: #1a1a1a;
+    --sidebar-bg: rgba(45, 52, 54, 0.9);
+    --card-bg: #2d3436;
+    --accent: #1b5e20;
+    --border: #404040;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --hover-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    background-color: var(--background);
+    background-image: url("/cropland-image.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+  
+  .layout {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  .main-content {
+    flex: 1;
+    transition: margin-right 0.3s ease;
+    /* padding-top: 60px; Space for the top bar */
+  }
+  
+  .sidebar-open .main-content {
+    margin-right: 280px;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar-open .main-content {
+      margin-right: 0;
+    }
+  }
+  
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: var(--sidebar-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+  }
+  
+  .theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+
+  /* .main-content{
+    background-color: #1d1919;
+  } */
+
+  .header-title {
+    display: flex;
+    align-content: center;
+    margin-left: 1200px;
+    margin-top: 0px;
+    color: #1b5e20;
+  }
+  
+  .logo-head {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
