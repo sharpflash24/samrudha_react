@@ -3,6 +3,8 @@ import "./dashboard.css";
 import { Line } from "react-chartjs-2";
 import "chart.js/auto";
 import PieChart from "./PieChart";
+import Footer from "./Footer";
+
 
 const Dashboard = () => {
   const yieldData = {
@@ -105,6 +107,7 @@ const Dashboard = () => {
             <h3>Yield vs Time</h3>
             <Line data={yieldData} />
         </div>
+        <Footer />
     </div>
   );
 };
